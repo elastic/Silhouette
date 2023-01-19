@@ -18,7 +18,7 @@ It is highly recommended to enable RunAsPPL before using Silhouette.
 
 **This is a proof of concept. Use it at your own risk.**
 
-1. Compile Silhouette.sln with Visual Studio 2019.
+1. Compile Silhouette.sln with Visual Studio 2019.  The WDK is required ([Win11 21H2 WDK tested](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads#step-2-install-the-wdk)).
 2. Enable [Test Signing](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
 3. Register the service:
 ```
