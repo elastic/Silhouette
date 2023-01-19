@@ -8,17 +8,17 @@ From _Hide Your Valuables — Mitigating Physical Credential Dumping Attacks_ pr
 
 Silhouette is a POC that mitigates the use of physical memory to dump credentials from LSASS.  It does this in three ways:
 
-  1. Aggressively flush LSASS's pages from RAM to disk
-  2. Block raw disk access within the boot volume, preventing raw copy attacks against `pagefile.sys` and `hiberfil.sys` (e.g. [Invoke-NinjaCopy](https://www.powershellgallery.com/packages/PowerSploit/1.0.0.0/Content/Exfiltration%5CInvoke-NinjaCopy.ps1))
-  3. Block `FILE_READ_DATA` for `pagefile.sys` in all Volume Shadow Copy snapshots
+  1. Aggressively flush LSASS's pages from RAM to disk.
+  2. Block raw disk access within the boot volume, preventing raw copy attacks against `pagefile.sys` and `hiberfil.sys` (e.g. [Invoke-NinjaCopy](https://www.powershellgallery.com/packages/PowerSploit/1.0.0.0/Content/Exfiltration%5CInvoke-NinjaCopy.ps1)).
+  3. Block `FILE_READ_DATA` for `pagefile.sys` in all Volume Shadow Copy snapshots to block access with tools like [hobocopy](https://github.com/candera/hobocopy).
 
-It is highly recommended to enable RunAsPPL before using Silhouette.
+*It is highly recommended to enable RunAsPPL before using Silhouette.*
 
 ## Building and running it
 
 **This is a proof of concept. Use it at your own risk.**
 
-1. Compile Silhouette.sln with Visual Studio 2019.  The WDK is required ([Win11 21H2 WDK tested](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads#step-2-install-the-wdk)).
+1. Compile Silhouette.sln with Visual Studio 2019.  The WDK is required.  This was originally developed with the [Win11 21H2 WDK](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads#step-2-install-the-wdk).
 2. Enable [Test Signing](https://docs.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option).
 3. Register the service:
 ```
