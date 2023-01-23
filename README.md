@@ -2,7 +2,7 @@
 
 By [Gabriel Landau](https://twitter.com/GabrielLandau) and [Mark Mager](https://twitter.com/magerbomb) at [Elastic Security](https://www.elastic.co/security-labs/).
 
-From _Hide Your Valuables — Mitigating Physical Credential Dumping Attacks_ presented at [Shmoocon 2023](https://shmoocon.org/). Slides [here](2023-01%20Silhouette%20Shmoocon%20Presentation.pdf).
+From [_Hide Your Valuables — Mitigating Physical Credential Dumping Attacks_](https://www.youtube.com/watch?v=NnM9HvDping&t=22652s) presented at [Shmoocon 2023](https://shmoocon.org/). Slides [here](2023-01%20Silhouette%20Shmoocon%20Presentation.pdf).
 
 ### Keeping LSA secrets out of physical memory
 
